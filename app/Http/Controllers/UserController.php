@@ -31,10 +31,18 @@ class UserController extends Controller
                 return view('home')->with('paginator', $paginator);
 
             } else {
-                echo "Erro na solicitação HTTP: " . $response->status();
+
+                return response()->json([
+                    'message' => 'HTTP request error: ' . $response->status()
+                ], 404);
+
             }
         } catch (Exception $e) {
-            echo "Erro: " . $e->getMessage();
+
+            return response()->json([
+                'message' => 'Error: ' . $e->getMessage()
+            ], 500);
+
         }
     }
 }
