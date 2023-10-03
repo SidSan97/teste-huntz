@@ -16,3 +16,5 @@ To run the project, simply clone it to your computer and run the command: <br>
 <br>
 
 <p>All project content is located in the root directory.</p>
+
+<p>For the pagination system, native Laravel classes such as <i>Collection</i> and <i>LengthAwarePaginator</i> were used. The table layout was all done using <i>Bootstrap</i> in version 5</p>
